@@ -1,0 +1,26 @@
+h1::before {
+    content: "xxx ";
+}
+h1::after {
+    content: " xxx";
+} a {
+    text-decoration: none;
+    color: rgb(0, 3, 158);
+    font-size: 1.8em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+a:hover::after {
+    content: "";
+    display: block;
+    height: 3px;
+    background-color: darkorange;
+    width: 0;
+    animation-name: grow;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+@keyframes grow {
+    to{
+        width: 4em;
+    }
+}
